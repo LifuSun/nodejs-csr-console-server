@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS payments (
     expiry_month VARCHAR(2) NOT NULL,
     expiry_year VARCHAR(4) NOT NULL,
     security_code VARCHAR(10) NOT NULL,
+    gateway_code VARCHAR(50) NOT NULL,
     api_version VARCHAR(10) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (merchant_id) REFERENCES merchants(id)
